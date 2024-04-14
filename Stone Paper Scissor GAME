@@ -1,0 +1,25 @@
+import random
+data = ["Stone", "Paper", "Scissor"]
+comp = random.choice(data)
+
+
+User = int(input("Enter Your Choice : \n 1.Stone \n 2.Paper \n 3.Scissor \n " ))
+if User == 1 :
+    User = "Stone"
+elif User == 2 :
+    User = "Paper"
+elif User == 3 :
+    User = "Scissor"
+else :
+    print("Invalid")
+
+print("User has Selected : ",User)
+
+if User != comp :
+    if (User == "Stone" and comp == "Scissor") or (User == "Paper" and comp == "Stone") or (User == "Scissor" and comp == "Paper") :
+        print("***  User Win  ***")
+    elif (User == "Paper" and comp == "Scissor") or (User == "Scissor" and comp == "Stone") or (User == "Stone" and comp == "Paper") :
+        print("***  Computer Win  ***")
+else :
+    print("***  It's a Tie ***")
+
